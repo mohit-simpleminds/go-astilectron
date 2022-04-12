@@ -153,13 +153,13 @@ func (p *Paths) initAppExecutable(os, appName string) {
 	switch os {
 	case "darwin":
 		if appName == "" {
-			appName = "Electron"
+			appName = "littledrops"
 		}
 		p.appExecutable = filepath.Join(p.electronDirectory, appName+".app", "Contents", "MacOS", appName)
 	case "linux":
-		p.appExecutable = filepath.Join(p.electronDirectory, "electron")
+		p.appExecutable = filepath.Join(p.electronDirectory, "littledrops")
 	case "windows":
-		p.appExecutable = filepath.Join(p.electronDirectory, "electron.exe")
+		p.appExecutable = filepath.Join(p.electronDirectory, "littledrops.exe")
 	}
 }
 
